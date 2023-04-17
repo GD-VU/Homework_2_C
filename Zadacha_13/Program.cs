@@ -11,14 +11,11 @@ void check(int a)
     System.Console.WriteLine("Третьей цифры нет!");
 }
 // программа вывода третьей цифры
-double print(double i)
+int print(int i)
 {
-    //int i = 123;
-    // double
-    char[] arr = i.ToString().ToCharArray();
-    double l = arr.Length;
-    double x1 = i/(Math.Pow(10, l-3));
-    double ThirdNumber = (x1%10);
-    //string result = ThirdNumber.ToString("#.##");
-    return Math.Round(ThirdNumber, 0);
+    while (i>999)
+    {
+        i /= 10;
+    }
+    return i % 10;
 }
